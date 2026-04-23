@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Modal Perception Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <div class="logo">⚡ PERCEPTION SYSTEM v1.0</div>
+            <div id="status" class="status offline">OFFLINE</div>
+        </header>
+
+        <main>
+            <section class="video-grid">
+                <div class="panel">
+                    <h3>RAW CAMERA FEED</h3>
+                    <img id="video-raw" src="" alt="Raw Stream">
+                </div>
+                <div class="panel">
+                    <h3>FUSED EDGE DETECTION</h3>
+                    <img id="video-edge" src="" alt="Edge Stream">
+                </div>
+                <div class="panel">
+                    <h3>FFT MAGNITUDE SPECTRUM</h3>
+                    <img id="video-spec" src="" alt="Spectrum Stream">
+                </div>
+            </section>
+
+            <section class="metrics-grid">
+                <div class="panel metric">
+                    <label>SCAN ANGLE</label>
+                    <div id="val-angle" class="value">0°</div>
+                </div>
+                <div class="panel metric">
+                    <label>DEPTH</label>
+                    <div id="val-distance" class="value">0 cm</div>
+                </div>
+                <div class="panel metric">
+                    <label>CONFIDENCE</label>
+                    <div id="val-confidence" class="value">0%</div>
+                </div>
+                <div class="panel metric">
+                    <label>NEURAL CLASSIFICATION</label>
+                    <div id="val-label" class="value">NONE</div>
+                </div>
+            </section>
+
+            <section class="charts-grid">
+                <div class="panel chart">
+                    <h3>RADAR VIEW (DISTANCE vs ANGLE)</h3>
+                    <canvas id="radarChart"></canvas>
+                </div>
+                <div class="panel chart">
+                    <h3>SIGNAL FREQUENCY SPECTRUM (1D-FFT)</h3>
+                    <canvas id="fftChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
