@@ -175,7 +175,7 @@ python backend/app.py
 ---
 
 ## 👩‍💻 Developed By
-- **MAYANNK DADHEECH**
+- **MAYANK DADHEECH**
 - **YASH MATHUR**
 
 ---
